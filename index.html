@@ -1,51 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eu estou contigo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <div class="logo">
-      <i class="fas fa-heart"></i>
-      <h1>Eu estou contigo</h1>
-    </div>
-    <i class="fas fa-sun"></i>
+    <h1>Eu estou contigo</h1>
+    <p>Bem-vindo ao Espaço de Cuidado</p>
   </header>
 
-  <section class="hero">
-    <h2>Bem-vindo ao Espaço de Cuidado</h2>
-    <p>Este é um ambiente criado com carinho para apoiar você em sua jornada.</p>
-  </section>
+  <nav>
+    <button onclick="mostrarSecao('emocional')">💬 Apoio Emocional</button>
+    <button onclick="mostrarSecao('nutricao')">🍎 Nutrição</button>
+    <button onclick="mostrarSecao('fisica')">🚶‍♀️ Atividades Físicas</button>
+    <button onclick="mostrarSecao('autoestima')">💧 Autoestima</button>
+    <button onclick="mostrarSecao('espiritual')">🕊 Espiritual</button>
+  </nav>
 
-  <section class="sections">
-    <h3>Navegue pelas seções</h3>
-    <div class="section-item"><i class="fas fa-comment-dots"></i> Apoio Emocional</div>
-    <div class="section-item"><i class="fas fa-apple-alt"></i> Nutrição e Bem-Estar</div>
-    <div class="section-item"><i class="fas fa-person-walking"></i> Atividades Físicas Suaves</div>
-    <div class="section-item"><i class="fas fa-droplet"></i> Cuidados com a Pele e Autoestima</div>
-    <div class="section-item"><i class="fas fa-dove"></i> Apoio Espiritual</div>
-  </section>
+  <main>
+    <section id="emocional" class="secao">
+      <h2>💬 Apoio Emocional</h2>
+      <p id="frase-dia">"Você é mais forte do que imagina."</p>
+      <textarea id="diario" placeholder="Escreva como está se sentindo..."></textarea>
+      <div class="botoes">
+        <button onclick="salvarDiario()">Salvar</button>
+        <button onclick="limparDiario()">Limpar</button>
+      </div>
+      <div id="texto-salvo"></div>
+    </section>
 
-  <section class="about">
-    <h3><i class="fas fa-lightbulb"></i> Sobre este espaço</h3>
-    <p>Este projeto foi criado para oferecer suporte integral — físico, emocional e espiritual — a pacientes em tratamento. Cada página traz conteúdos pensados com empatia, leveza e respeito.</p>
-  </section>
+    <section id="nutricao" class="secao">
+      <h2>🍎 Nutrição e Bem-Estar</h2>
+      <p>Dicas de alimentação saudável em breve!</p>
+    </section>
 
-  <footer>
-    Desenvolvido com carinho por Ivan 💙
-  </footer>
+    <section id="fisica" class="secao">
+      <h2>🚶‍♀️ Atividades Físicas Suaves</h2>
+      <p>Exercícios leves para o corpo e mente.</p>
+    </section>
 
-  <div class="bottom-nav">
-    <a href="#"><i class="fas fa-home"></i></a>
-    <a href="#"><i class="fas fa-comment"></i></a>
-    <a href="#"><i class="fas fa-envelope"></i></a>
-  </div>
+    <section id="autoestima" class="secao">
+      <h2>💧 Cuidados com a Pele e Autoestima</h2>
+      <p>Rotinas simples para se sentir bem.</p>
+    </section>
 
+    <section id="espiritual" class="secao">
+      <h2>🕊 Apoio Espiritual</h2>
+      <p>Meditações e mensagens inspiradoras.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
