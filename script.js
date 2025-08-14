@@ -3,29 +3,13 @@ function mostrarSecao(id) {
   secoes.forEach(secao => secao.style.display = 'none');
 
   const ativa = document.getElementById(id);
-  if (ativa) ativa.style.display = 'block';
-
-  if (id === 'emocional') {
-    carregarDiario();
+  if (ativa) {
+    ativa.style.display = 'block';
+    window.scrollTo({ top: ativa.offsetTop, behavior: 'smooth' });
   }
 }
 
-function salvarDiario() {
-  const texto = document.getElementById("diario").value;
-  localStorage.setItem("diarioEmocional", texto);
-  carregarDiario();
-}
-
-function limparDiario() {
-  document.getElementById("diario").value = "";
-  localStorage.removeItem("diarioEmocional");
-  document.getElementById("texto-salvo").innerHTML = "";
-}
-
-function carregarDiario() {
-  const textoSalvo = localStorage.getItem("diarioEmocional");
-  if (textoSalvo) {
-    document.getElementById("texto-salvo").innerHTML =
-      `<h4>📝 Último registro:</h4><p>${textoSalvo}</p>`;
-  }
-}
+// Mostrar a primeira seção ao carregar
+window.onload = () => {
+  mostrarSecao('emocional');
+};
