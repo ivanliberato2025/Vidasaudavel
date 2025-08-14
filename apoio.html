@@ -1,44 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apoio Emocional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section id="emocional" class="secao">
+  <h2>💬 Apoio Emocional</h2>
+  <p id="frase-dia">"Você é mais forte do que imagina."</p>
 
-  <header>
-    <div class="logo">
-      <i class="fas fa-heart"></i>
-      <h1>Eu estou contigo</h1>
-    </div>
-    <i class="fas fa-sun"></i>
-  </header>
+  <textarea id="diario" placeholder="Escreva como está se sentindo..."></textarea>
+  <div class="botoes">
+    <button onclick="salvarDiario()">Salvar</button>
+    <button onclick="limparDiario()">Limpar</button>
+  </div>
 
-  <a href="index.html" class="voltar">← Voltar para a página inicial</a>
-
-  <nav class="menu-secoes">
-    <a href="apoio.html">Apoio Emocional</a>
-    <a href="nutricao.html">Nutrição</a>
-    <a href="atividade.html">Atividades</a>
-    <a href="autoestima.html">Autoestima</a>
-    <a href="espiritualidade.html">Espiritualidade</a>
-  </nav>
-
-  <section class="conteudo">
-    <h2><i class="fas fa-comment-dots"></i> Apoio Emocional</h2>
-    <p>
-      Aqui você encontra palavras de acolhimento, escuta ativa e ferramentas para lidar com os sentimentos durante o tratamento.  
-      Lembre-se: você não está sozinho. Sua dor é válida, e seu bem-estar emocional importa.
-    </p>
-  </section>
-
-  <footer>
-    Desenvolvido com carinho por Ivan 💙
-  </footer>
-
-</body>
-</html>
+  <div id="texto-salvo" style="margin-top: 15px;"></div>
+</section>
