@@ -8,28 +8,24 @@
 </head>
 <body>
   <header>
-    <h1>Eu estou contigo</h1>
+    <h1>❤️ Eu estou contigo</h1>
     <p>Bem-vindo ao Espaço de Cuidado</p>
   </header>
 
   <nav>
-    <button onclick="mostrarSecao('emocional')">💬 Apoio Emocional</button>
-    <button onclick="mostrarSecao('nutricao')">🍎 Nutrição</button>
-    <button onclick="mostrarSecao('fisica')">🚶‍♀️ Atividades Físicas</button>
-    <button onclick="mostrarSecao('autoestima')">💧 Autoestima</button>
-    <button onclick="mostrarSecao('espiritual')">🕊 Espiritual</button>
+    <ul>
+      <li onclick="mostrarSecao('emocional')">💬 Apoio Emocional</li>
+      <li onclick="mostrarSecao('nutricao')">🍎 Nutrição e Bem-Estar</li>
+      <li onclick="mostrarSecao('fisica')">🚶‍♀️ Atividades Físicas Suaves</li>
+      <li onclick="mostrarSecao('autoestima')">💧 Cuidados com a Pele e Autoestima</li>
+      <li onclick="mostrarSecao('espiritual')">🕊 Apoio Espiritual</li>
+    </ul>
   </nav>
 
   <main>
     <section id="emocional" class="secao">
       <h2>💬 Apoio Emocional</h2>
-      <p id="frase-dia">"Você é mais forte do que imagina."</p>
-      <textarea id="diario" placeholder="Escreva como está se sentindo..."></textarea>
-      <div class="botoes">
-        <button onclick="salvarDiario()">Salvar</button>
-        <button onclick="limparDiario()">Limpar</button>
-      </div>
-      <div id="texto-salvo"></div>
+      <p>"Você é mais forte do que imagina."</p>
     </section>
 
     <section id="nutricao" class="secao">
@@ -52,6 +48,10 @@
       <p>Meditações e mensagens inspiradoras.</p>
     </section>
   </main>
+
+  <footer>
+    <p>🏠 Início | 💬 Chat | ✉️ Contato</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
